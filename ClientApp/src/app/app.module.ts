@@ -14,6 +14,8 @@ import { BookDetailsComponent } from './book-details/book-details.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartComponent } from './cart/cart.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     BookDetailsComponent,
     ProductListComponent,
     ProductAlertsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -40,7 +44,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
       { path: 'book-details', component: BooksComponent },
       { path: 'product-list', component: ProductListComponent },
       { path: 'product-alerts', component: ProductAlertsComponent },
-      { path: 'products/:productId', component:ProductDetailsComponent}
+      { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'cart', component: CartComponent },
+      { path: 'top-bar', component: TopBarComponent }
     ])
   ],
   providers: [],
