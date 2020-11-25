@@ -11,6 +11,8 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { BooksComponent } from './books/books.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { BookDetailsComponent } from './book-details/book-details.component';
     CounterComponent,
     FetchDataComponent,
     BooksComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    ProductListComponent,
+    ProductAlertsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -31,7 +35,9 @@ import { BookDetailsComponent } from './book-details/book-details.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'book', component: BooksComponent },
-      { path: 'book-details', component: BooksComponent }
+      { path: 'book-details', component: BooksComponent },
+      { path: 'product-list', component: ProductListComponent },
+      { path: 'product-alerts', component: ProductAlertsComponent }
     ])
   ],
   providers: [],
