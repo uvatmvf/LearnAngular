@@ -2,19 +2,22 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-book-details',
-    templateUrl: './book-details.component.html',
-    styleUrls: ['./book-details.component.scss']
+    templateUrl: './book-details.component.html'
 })
 /** book-details component*/
 export class BookDetailsComponent implements OnInit {
   @Input() book;
-  @Output() notify = new EventEmitter();
+  @Output() notify = new EventEmitter<string>();
 
     /** book-details ctor */
   constructor() { }
 
     ngOnInit(): void {
         
+  }
+
+  sendDetails() {
+    this.notify.emit(this.book.details);
   }
 
   

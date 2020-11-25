@@ -14,8 +14,8 @@ export class BooksComponent {
     }, error => console.error(error));
   }
 
-  onNotify() {
-    window.alert('test');
+  onNotify(details: string) {
+    window.alert(details);
   }
 }
 

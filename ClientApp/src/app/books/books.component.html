@@ -14,7 +14,7 @@
       <td>{{book.author}}</td>
       <td>{{book.title}}</td>
       <td>{{book.publisher}} <p *ngIf="book.publishYear">{{book.publishYear}}</p></td>
-      <td><app-book-details [book]="book" (notify)="onNotify()" *ngIf="book.details"></app-book-details></td>
+      <td><app-book-details [book]="book" (notify)="onNotify($event)" *ngIf="book.details"></app-book-details></td>
     </tr>
   </tbody>
 </table>
