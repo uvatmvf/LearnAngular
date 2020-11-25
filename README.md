@@ -1,4 +1,4 @@
 # LearnAngular
 Learn the basics of Angular
 
-A hello world++ exercise for .Net Core 5 with Angular components
+Tutorial exercises with Angular components. Implemented in .Net 5.
