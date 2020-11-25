@@ -13,6 +13,7 @@ import { BooksComponent } from './books/books.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
     BooksComponent,
     BookDetailsComponent,
     ProductListComponent,
-    ProductAlertsComponent
+    ProductAlertsComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -37,7 +39,8 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
       { path: 'book', component: BooksComponent },
       { path: 'book-details', component: BooksComponent },
       { path: 'product-list', component: ProductListComponent },
-      { path: 'product-alerts', component: ProductAlertsComponent }
+      { path: 'product-alerts', component: ProductAlertsComponent },
+      { path: 'products/:productId', component:ProductDetailsComponent}
     ])
   ],
   providers: [],
