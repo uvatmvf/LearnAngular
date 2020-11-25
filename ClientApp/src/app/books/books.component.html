@@ -5,16 +5,14 @@
     <tr>
       <th>Author</th>
       <th>Title</th>
-      <th>Publisher</th>
-      <th>Year</th>
+      <th>Publisher</th>      
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let book of books">
       <td>{{book.author}}</td>
       <td>{{book.title}}</td>
-      <td>{{book.publisher}}</td>
-      <td>{{book.publishYear}}</td>
+      <td>{{book.publisher}} <p *ngIf="book.publishYear">{{book.publishYear}}</p></td>      
     </tr>
   </tbody>
 </table>
