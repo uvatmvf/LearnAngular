@@ -2,7 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'books',
+  selector: 'app-books',
   templateUrl: './books.component.html'
 })
 export class BooksComponent {
