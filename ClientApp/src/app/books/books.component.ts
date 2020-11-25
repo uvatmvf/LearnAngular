@@ -13,6 +13,10 @@ export class BooksComponent {
       this.books = result;
     }, error => console.error(error));
   }
+
+  onNotify() {
+    window.alert('test');
+  }
 }
 
 interface Book {
@@ -20,4 +24,5 @@ interface Book {
   title: string;
   publisher: string;
   publishYear: number;
+  details: string;
 }
