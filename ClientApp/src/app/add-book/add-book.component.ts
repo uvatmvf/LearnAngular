@@ -19,9 +19,10 @@ export class AddBookComponent implements OnInit {
     private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
       author: '',
+      details: '',
       publisher: '',
       title: '',
-      year: 0
+      year: ''
     });
   }
 
@@ -32,6 +33,7 @@ export class AddBookComponent implements OnInit {
   onSubmit(book) {
     var newBook = new Book({
       author: book.author,
+      details: book.details,
       publisher: book.publisher,
       title: book.title,
       year: book.year,        

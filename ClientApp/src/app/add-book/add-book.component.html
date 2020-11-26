@@ -1,29 +1,21 @@
 <div>
   <form (ngSubmit)="onSubmit(form.value)" [formGroup]="form">
     <div>
-      <label for="author">
-        Author
-      </label>
-      <input id="author" type="text" formControlName="author" />
+      <input id="author" type="text" class="form-control" formControlName="author" placeholder="Author" />
     </div>
     <div>
-      <label for="title">
-        Title
-      </label>
-      <input id="title" type="text" formControlName="title" />
+      <input id="title" type="text" class="form-control" formControlName="title" placeholder="Title" />
     </div>
     <div>
-      <label for="publisher">
-        Publisher
-      </label>
-      <input id="publisher" type="text" formControlName="publisher" />
+      <input id="publisher" type="text" class="form-control" formControlName="publisher" placeholder="Publisher" />
     </div>
     <div>
-      <label for="year">
-        Year
-      </label>
-      <input id="year" type="text" formControlName="year" />
-    </div>    
+      <!--<input id="details" type="text" class="form-control" formControlName="details" placeholder="Details" />-->
+      <textarea id="details" formControlName="details" placeholder="Details"></textarea>
+    </div>
+    <div>      
+      <input id="year" type="text" class="form-control" formControlName="year" placeholder="Year" />
+    </div>
     <div class="form-row">
       <button type="submit">Add to library</button>
     </div>
