@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from '../../cart.service';
+import { CatalogService } from '../../catalog.service';
 
 @Component({
     selector: 'app-add-book',
@@ -8,12 +8,26 @@ import { CartService } from '../../cart.service';
 
 /** add-book component*/
 export class AddBookComponent implements OnInit {
-  items;
+  item;
+  author;   
+  publisher;
+  title;
+  year;
+
     /** add-book ctor */
-    constructor(private cartService: CartService) {
+    constructor(private catalogService: CatalogService) {
 
   }
   ngOnInit() {
-    this.items = this.cartService.getItems();
+    
+  }
+
+  addToLibrary() {
+    this.catalogService.books.push({
+      author: this.author,
+      publisher: this.publisher,
+      publishYear: this.year,
+      title: this.title
+    });
   }
 }

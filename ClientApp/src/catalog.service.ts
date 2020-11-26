@@ -13,5 +13,4 @@ export class CatalogService  {
     this.products = new CartService();
     this.books = new CartService();
   }
-
 }

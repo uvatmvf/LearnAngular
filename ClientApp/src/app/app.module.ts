@@ -16,6 +16,7 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { AddBookComponent } from './add-book/add-book.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    TopBarComponent
+    TopBarComponent,
+    AddBookComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -41,6 +43,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'book', component: BooksComponent },
+      { path: 'add-book', component: AddBookComponent },
       { path: 'book-details', component: BooksComponent },
       { path: 'product-list', component: ProductListComponent },
       { path: 'product-alerts', component: ProductAlertsComponent },

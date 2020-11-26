@@ -1,1 +1,7 @@
-﻿<div style="border: 1px solid red">add-book Component</div>
+<form>
+  <input type="text" value="{{ author }}" />
+  <input type="text" value="{{ title }}" />
+  <input type="text" value="{{ publisher }}" />
+  <input type="text" value="{{ year }}" />
+  <button (click)="addToLibrary()">Add to library</button>
+</form>
