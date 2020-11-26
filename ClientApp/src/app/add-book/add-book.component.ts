@@ -27,9 +27,6 @@ export class AddBookComponent implements OnInit {
 
   ngOnInit() {
     this.book = new Book();
-    //const group: any = {};
-    //group['newBook'] = this.book;
-    //this.form = new FormGroup(group);
   }
 
   onSubmit(book) {
