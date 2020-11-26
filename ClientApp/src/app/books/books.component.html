@@ -1,5 +1,7 @@
-<h1 id="tableLabel">Books</h1>
-
+<div>  
+    <app-add-book></app-add-book>
+</div>
+<h1 id="tableLabel">Library</h1>
 <table class='table table-striped' aria-labelledby="tableLabel">
   <thead>
     <tr>
@@ -8,8 +10,8 @@
       <th>Publisher</th>
       <th>Details</th>
     </tr>
-  </thead>
-  <tbody>
+  </thead>  
+  <tbody>    
     <tr *ngFor="let book of catalogService.books.items">
       <td>{{book.author}}</td>
       <td>{{book.title}}</td>
@@ -18,7 +20,3 @@
     </tr>
   </tbody>
 </table>
-<div>
-  <app-add-book></app-add-book>
-</div>
-

@@ -1,23 +1,14 @@
 <div>
+  <div>
+    <h2>Add Book</h2>
+  </div>
   <form (ngSubmit)="onSubmit(form.value)" [formGroup]="form">
-    <div>
       <input id="author" type="text" class="form-control" formControlName="author" placeholder="Author" />
-    </div>
-    <div>
       <input id="title" type="text" class="form-control" formControlName="title" placeholder="Title" />
-    </div>
-    <div>
       <input id="publisher" type="text" class="form-control" formControlName="publisher" placeholder="Publisher" />
-    </div>
-    <div>
       <textarea id="details" formControlName="details" placeholder="Details"></textarea>
-    </div>
-    <div>      
       <input id="year" type="text" class="form-control" formControlName="year" placeholder="Year" />
-    </div>
-    <div class="form-row">
       <button type="submit">Add to library</button>
-    </div>
   </form>
   <div *ngIf="payLoad" class="form-row">
     <strong>Saved</strong>{{ payLoad }}
