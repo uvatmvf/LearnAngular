@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
@@ -16,6 +18,7 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { AddBookComponent } from './add-book/add-book.component';
 
 @NgModule({
   declarations: [
@@ -30,17 +33,20 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    TopBarComponent
+    TopBarComponent,
+    AddBookComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'book', component: BooksComponent },
+      { path: 'add-book', component: AddBookComponent },
       { path: 'book-details', component: BooksComponent },
       { path: 'product-list', component: ProductListComponent },
       { path: 'product-alerts', component: ProductAlertsComponent },
