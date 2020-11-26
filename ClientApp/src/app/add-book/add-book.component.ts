@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Book } from '../../book';
 import { CatalogService } from '../../catalog.service';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
     selector: 'app-add-book',
@@ -9,25 +11,30 @@ import { CatalogService } from '../../catalog.service';
 /** add-book component*/
 export class AddBookComponent implements OnInit {
   item;
-  author;   
-  publisher;
-  title;
-  year;
-
+  form: FormGroup;
+  book: Book;
+  payLoad;
     /** add-book ctor */
     constructor(private catalogService: CatalogService) {
 
   }
+
   ngOnInit() {
-    
+    this.book = new Book();
+    const group: any = {};
+    group['newBook'] = this.book;
+    this.form = new FormGroup(group);
   }
 
   addToLibrary() {
-    this.catalogService.books.push({
-      author: this.author,
-      publisher: this.publisher,
-      publishYear: this.year,
-      title: this.title
+    var newBook = new Book({
+      author: this.book.author,
+      publisher: this.book.publisher,
+      title: this.book.title,
+      year: this.book.year,        
     });
+      
+    this.catalogService.books.addToCart(newBook);    
+    this.payLoad = JSON.stringify(this.form.getRawValue());
   }
 }

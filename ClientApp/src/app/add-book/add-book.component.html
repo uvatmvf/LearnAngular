@@ -1,7 +1,14 @@
-<form>
-  <input type="text" value="{{ author }}" />
-  <input type="text" value="{{ title }}" />
-  <input type="text" value="{{ publisher }}" />
-  <input type="text" value="{{ year }}" />
-  <button (click)="addToLibrary()">Add to library</button>
-</form>
+<div>
+  <form (ngSubmit)="addToLibrary()">
+    <input type="text" value="{{ book.author }}" />
+    <input type="text" value="{{ book.title }}" />
+    <input type="text" value="{{ book.publisher }}" />
+    <input type="text" value="{{ book.year }}" />
+    <div class="form-row">
+      <button type="submit">Add to library</button>
+    </div>    
+  </form>
+  <div *ngIf="payLoad" class="form-row">
+    <strong>Saved</strong>{{ payLoad }}
+  </div>
+</div>
