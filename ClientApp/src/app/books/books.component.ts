@@ -13,8 +13,9 @@ export class BooksComponent {
     @Inject('BASE_URL') baseUrl: string,
     private catalogService: CatalogService) {
     http.get<Book[]>(baseUrl + 'book').subscribe(result => {
-      this.books = result;      
+      this.books = result;
 
+      catalogService.books.clearCart();
       for(let book of this.books)
       {
         catalogService.books.addToCart(book);
