@@ -14,14 +14,15 @@ export class BooksComponent {
     private catalogService: CatalogService) {
     http.get<Book[]>(baseUrl + 'book').subscribe(result => {
       this.books = result;
-
-      catalogService.books.clearCart();
-      for(let book of this.books)
-      {
-        catalogService.books.addToCart(book);
+      // TODO: Fix refresh browser issue that kills the view
+      if (this.catalogService.books.getItems().length == 0)
+      {        
+        for (let book of this.books) {
+          this.catalogService.books.addToCart(book);
+        }
       }
+      this.books = this.catalogService.books.getItems();
 
-      
     }, error => console.error(error));
   }
 
