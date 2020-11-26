@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let book of books">
+    <tr *ngFor="let book of catalogService.books.items">
       <td>{{book.author}}</td>
       <td>{{book.title}}</td>
       <td>{{book.publisher}} <p *ngIf="book.publishYear">{{book.publishYear}}</p></td>
