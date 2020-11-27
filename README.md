@@ -7,7 +7,6 @@ Demonstrates:
 TODOs:
 - Implement onDestroy for subscribers https://ultimatecourses.com/blog/exploring-angular-lifecycle-hooks-ondestroy
 - Add remove button to library line items.
-- Add GUI toggle to flip app-add-book component from bottom to top of grid
 
 - Add streaming data endpoint for component.
 

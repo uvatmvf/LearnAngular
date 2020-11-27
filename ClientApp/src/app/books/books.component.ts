@@ -8,6 +8,7 @@ import { CatalogService } from '../../catalog.service';
 })
 export class BooksComponent {
   public books: Book[];
+  showAddTop: boolean;
 
   constructor(http: HttpClient,
     @Inject('BASE_URL') baseUrl: string,

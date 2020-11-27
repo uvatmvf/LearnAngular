@@ -1,7 +1,15 @@
-<div>  
-    <app-add-book></app-add-book>
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input"
+         id="customSwitch1"
+         [checked]="showAddTop"
+         (change)="showAddTop = !showAddTop" />
+  <label class="custom-control-label" for="customSwitch1">Add form top/bottom</label>
+</div>
+<div *ngIf="showAddTop">
+  <app-add-book></app-add-book>
 </div>
 <h1 id="tableLabel">Library</h1>
+
 <table class='table table-striped' aria-labelledby="tableLabel">
   <thead>
     <tr>
@@ -20,3 +28,6 @@
     </tr>
   </tbody>
 </table>
+<div *ngIf="!showAddTop">
+  <app-add-book></app-add-book>
+</div>
