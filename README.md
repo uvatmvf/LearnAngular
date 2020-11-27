@@ -6,7 +6,6 @@ Demonstrates:
 
 TODOs:
 - Implement onDestroy for subscribers https://ultimatecourses.com/blog/exploring-angular-lifecycle-hooks-ondestroy
-- Fix/figure out issue with view in books library destroyed on page refresh
 - Add remove button to library line items.
 - Add GUI toggle to flip app-add-book component from bottom to top of grid
 
