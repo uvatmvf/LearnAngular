@@ -45,7 +45,7 @@ import { AddBookComponent } from './add-book/add-book.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'book', component: BooksComponent },
+      { path: 'books', component: BooksComponent },
       { path: 'add-book', component: AddBookComponent },
       { path: 'book-details', component: BooksComponent },
       { path: 'product-list', component: ProductListComponent },
