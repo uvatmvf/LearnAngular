@@ -17,7 +17,9 @@ export class BookDetailsComponent implements OnInit {
   }
 
   sendDetails() {
-    this.notify.emit(this.book.details);
+    if (this.book) {
+      this.notify.emit(this.book.details);
+    }
   }
 
   
