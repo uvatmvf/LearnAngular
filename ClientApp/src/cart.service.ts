@@ -21,4 +21,12 @@ export class CartService {
     this.items = [];
     return this.items;
   }
+
+  removeFromCart(product) {
+    this.items.forEach((item, index) => {
+      if (item == product) {
+        this.items.splice(index, 1);
+      }
+    });
+  }
 }

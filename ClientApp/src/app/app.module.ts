@@ -19,6 +19,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartComponent } from './cart/cart.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { AddBookComponent } from './add-book/add-book.component';
+import { RemoveBookComponent } from './remove-book/remove-book.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { AddBookComponent } from './add-book/add-book.component';
     ProductDetailsComponent,
     CartComponent,
     TopBarComponent,
-    AddBookComponent
+    AddBookComponent,
+    RemoveBookComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -52,7 +55,8 @@ import { AddBookComponent } from './add-book/add-book.component';
       { path: 'product-alerts', component: ProductAlertsComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
-      { path: 'top-bar', component: TopBarComponent }
+      { path: 'top-bar', component: TopBarComponent },
+      { path: 'remove-book', component: RemoveBookComponent }
     ])
   ],
   providers: [],
