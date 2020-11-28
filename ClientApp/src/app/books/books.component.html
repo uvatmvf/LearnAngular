@@ -17,6 +17,7 @@
       <th>Title</th>
       <th>Publisher</th>
       <th>Details</th>
+      <th></th>
     </tr>
   </thead>  
   <tbody>    
@@ -25,6 +26,7 @@
       <td>{{book.title}}</td>
       <td>{{book.publisher}} <p *ngIf="book.publishYear">{{book.publishYear}}</p></td>
       <td><app-book-details [book]="book" (notify)="onNotify($event)" *ngIf="book.details"></app-book-details></td>
+      <td><app-remove-book [book]="book"></app-remove-book></td>
     </tr>
   </tbody>
 </table>
