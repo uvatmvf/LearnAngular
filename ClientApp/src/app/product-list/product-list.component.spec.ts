@@ -4,7 +4,6 @@ import { ProductListComponent } from './product-list.component';
 import { TopBarComponent } from '../top-bar/top-bar.component';
 import { ProductAlertsComponent } from '../product-alerts/product-alerts.component';
 import { RouterModule } from '@angular/router';
-import { BooksComponent } from '../books/books.component';
 
 let component: ProductListComponent;
 let fixture: ComponentFixture<ProductListComponent>;
