@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Book } from '../../book';
 
 @Component({
     selector: 'app-book-details',
@@ -10,7 +11,9 @@ export class BookDetailsComponent implements OnInit {
   @Output() notify = new EventEmitter<string>();
 
     /** book-details ctor */
-  constructor() { }
+  constructor() {
+    this.book = new Book();
+  }
 
     ngOnInit(): void {
         
@@ -20,7 +23,5 @@ export class BookDetailsComponent implements OnInit {
     if (this.book) {
       this.notify.emit(this.book.details);
     }
-  }
-
-  
+  }  
 }
